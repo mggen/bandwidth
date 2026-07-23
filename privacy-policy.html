@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - التحكم فى الباقة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            padding: 60px 0;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 20px 0 20px 30px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: right;
+        }
+
+        table td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:hover {
+            background: #f0f0f0;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: #f0f4ff;
+            border-right: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box strong {
+            color: #667eea;
+        }
+
+        /* Link */
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #667eea;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #fff;
+        }
+
+        .footer-content p {
+            margin: 10px 0;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+        }
+
+        /* Back to Home */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: #764ba2;
+            transform: translateX(5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo {
+                font-size: 1.5em;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 0.9em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            table th, table td {
+                padding: 10px;
+            }
+        }
+
+        .update-date {
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">📱 التحكم فى الباقة</a>
+                <nav>
+                    <a href="index.html">الرئيسية</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <a href="index.html" class="back-link">← العودة إلى الرئيسية</a>
+
+            <h1>📜 سياسة الخصوصية</h1>
+            <p style="text-align: center; font-size: 1.1em; color: #666;">تطبيق "التحكم فى الباقة"</p>
+
+            <!-- 1. مقدمة -->
+            <h2>1️⃣ مقدمة</h2>
+            <p>مرحباً بك في تطبيق <strong>"التحكم فى الباقة"</strong>. نضع خصوصيتك في مقدمة أولوياتنا. تم تصميم هذا التطبيق لمساعدتك في إدارة استهلاك بياناتك الشهرية بكفاءة، مع ضمان الحفاظ على خصوصيتك التامة وأمان بياناتك.</p>
+
+            <!-- 2. جمع البيانات -->
+            <h2>2️⃣ جمع البيانات</h2>
+            <div class="highlight-box">
+                <strong>🔒 نحن لا نجمع أي بيانات شخصية على الإطلاق.</strong>
+            </div>
+            <ul>
+                <li>❌ لا نجمع اسمك، بريدك الإلكتروني، رقم هاتفك، أو أي معلومات تعريف شخصية</li>
+                <li>❌ لا نجمع عنوان IP الخاص بك</li>
+                <li>❌ لا نتتبع موقعك الجغرافي</li>
+                <li>❌ لا نستخدم أي أدوات تحليلات لتتبع سلوكك داخل التطبيق</li>
+                <li>✅ كل ما يحدث في التطبيق يبقى على جهازك فقط</li>
+            </ul>
+
+            <!-- 3. كيفية عمل التطبيق -->
+            <h2>3️⃣ كيفية عمل التطبيق (الشفافية الكاملة)</h2>
+
+            <h3>🔗 تحديد السرعة (Throttling)</h3>
+            <p>التطبيق ينشئ نفق VPN محلي على جهازك لتقييد سرعة التطبيقات التي تختارها (مثل فيسبوك، تيك توك، انستجرام). هذه العملية تتم محليًا بالكامل على جهازك.</p>
+
+            <h3>📊 مراقبة الاستهلاك</h3>
+            <p>يتم حساب استهلاك البيانات باستخدام أدوات Android الرسمية (NetworkStatsManager). هذه البيانات تُعرض لك فقط ولا تُخزن أو تُرسل إلى أي مكان خارجي.</p>
+
+            <h3>📱 التطبيقات المستهدفة</h3>
+            <p>قائمة التطبيقات التي تختارها لحظيًا يتم حفظها على جهازك ولا تشارك مع أي جهة خارجية.</p>
+
+            <!-- 4. الصلاحيات -->
+            <h2>4️⃣ الصلاحيات المطلوبة (Permissions)</h2>
+            <p>يطلب التطبيق الصلاحيات التالية لتشغيل خدماته الأساسية:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>الصلاحية</th>
+                        <th>الغرض</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>VPN Service</strong></td>
+                        <td>لإنشاء نفق محلي على جهازك لتطبيق حد السرعة على التطبيقات المختارة</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PACKAGE_USAGE_STATS</strong></td>
+                        <td>للتعرف على التطبيق النشط حاليًا (المفتوح على الشاشة) لتطبيق الخنق الانتقائي عندما تختار هذه الميزة</td>
+                    </tr>
+                    <tr>
+                        <td><strong>INTERNET</strong></td>
+                        <td>لعرض الإعلانات فقط (من Unity Ads) وليس لإرسال أي بيانات عنك</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 20px;"><strong>ملاحظة:</strong> جميع هذه الصلاحيات تُستخدم للغرض المذكور فقط، ولا تمنحنا أي وصول إلى بياناتك الشخصية.</p>
+
+            <!-- 5. الإعلانات -->
+            <h2>5️⃣ الإعلانات (الطرف الثالث الوحيد)</h2>
+            <p>نعرض إعلانات داخل التطبيق من خلال شبكة إعلانات Unity Ads، وهي الطرف الثالث الوحيد الذي يتفاعل مع التطبيق.</p>
+
+            <h3>📊 ماذا تجمع Unity Ads؟</h3>
+            <ul>
+                <li><strong>معرف الإعلان (Advertising ID):</strong> وهو معرف فريد لجهازك لتقديم إعلانات مخصصة. يمكنك إعادة ضبط هذا المعرف أو إلغاء تخصيص الإعلانات من إعدادات جهازك (الإعدادات > Google > الإعلانات)</li>
+                <li><strong>نوع الجهاز وإصدار نظام التشغيل:</strong> لعرض الإعلانات المناسبة لجهازك</li>
+                <li><strong>الموقع التقريبي (اختياري):</strong> لتقديم إعلانات ذات صلة بمنطقتك</li>
+            </ul>
+
+            <h3>🎛️ كيف تتحكم في الإعلانات؟</h3>
+            <p>يمكنك في أي وقت:</p>
+            <ul>
+                <li>إلغاء تخصيص الإعلانات من إعدادات جهازك</li>
+                <li>تعطيل الإعلانات المخصصة (غير متاحة حاليًا داخل التطبيق نفسه، لكن يمكنك التحكم من إعدادات جهازك)</li>
+            </ul>
+
+            <p style="margin-top: 20px;">للمزيد من المعلومات، يمكنك الاطلاع على سياسة خصوصية Unity Technologies:</p>
+            <p>🔗 <a href="https://unity.com/legal/privacy-policy" target="_blank">Unity Privacy Policy</a></p>
+
+            <div class="highlight-box">
+                <strong>ملاحظة مهمة:</strong> نؤكد أننا لا نشارك أي بيانات عنك مع Unity Ads، فكل ما تجمعه هو من خلال تفاعل الإعلان مع جهازك مباشرة.
+            </div>
+
+            <!-- 6. مشاركة البيانات -->
+            <h2>6️⃣ مشاركة البيانات</h2>
+            <p>نحن <strong>لا نبيع، ولا نتاجر، ولا ننقل</strong> أي من بياناتك إلى أي طرف خارجي، وذلك لأننا ببساطة لا نجمعها من الأساس.</p>
+            <p>الجهة الوحيدة التي تتعامل مع بيانات هي Unity Ads، وذلك وفقًا لسياسة الخصوصية الخاصة بها، ونحن لا نتحكم في ذلك ولا نشارك فيه.</p>
+
+            <!-- 7. أمان البيانات -->
+            <h2>7️⃣ أمان البيانات</h2>
+            <p>بما أن التطبيق يعمل محليًا على جهازك ولا ينقل بياناتك عبر الإنترنت، فإن خطر التعرض لاختراق البيانات محدود للغاية.</p>
+            <p><strong>نوصيك دائمًا بـ:</strong></p>
+            <ul>
+                <li>🔐 حماية جهازك بكلمة مرور قوية</li>
+                <li>♻️ تحديث نظام التشغيل بانتظام</li>
+            </ul>
+
+            <!-- 8. خصوصية الأطفال -->
+            <h2>8️⃣ خصوصية الأطفال</h2>
+            <p>نحن لا نقوم بجمع أي بيانات من هذه الفئة العمرية. إذا كنت ولي أمر وتعتقد أن طفلك يستخدم التطبيق وتشعر بالقلق حيال ذلك <a href="mailto:farahat.xbs@gmail.com">تواصل معنا</a>.</p>
+
+            <!-- 9. التغييرات -->
+            <h2>9️⃣ التغييرات على سياسة الخصوصية</h2>
+            <p>قد نقوم بتحديث هذه السياسة من وقت لآخر. سيتم إعلامك بأي تغييرات جوهرية من خلال:</p>
+            <ul>
+                <li>📝 نشر السياسة الجديدة على هذه الصفحة</li>
+                <li>🔔 إشعار داخل التطبيق</li>
+            </ul>
+            <p><strong>يُرجى مراجعة هذه الصفحة دوريًا للاطلاع على أي تحديثات.</strong></p>
+
+            <!-- 10. الاتصال -->
+            <h2>🔟 الاتصال بنا</h2>
+            <p>إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية، يمكنك التواصل معنا عبر البريد الإلكتروني:</p>
+            <div class="highlight-box">
+                📧 <a href="mailto:farahat.xbs@gmail.com">farahat.xbs@gmail.com</a>
+            </div>
+
+            <p class="update-date">آخر تحديث: يوليو 2026</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>التحكم فى الباقة</strong></p>
+                <p>تطبيق ذكي لإدارة استهلاك البيانات</p>
+                <div class="divider"></div>
+                <p>
+                    📧 البريد الإلكتروني: 
+                    <a href="mailto:farahat.xbs@gmail.com" class="footer-link">farahat.xbs@gmail.com</a>
+                </p>
+                <p>
+                    🏠 
+                    <a href="index.html" class="footer-link">الرئيسية</a>
+                </p>
+                <div class="divider"></div>
+                <p>&copy; 2026 جميع الحقوق محفوظة | التحكم فى الباقة</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
