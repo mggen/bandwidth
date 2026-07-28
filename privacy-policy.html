@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سياسة الخصوصية - التحكم فى الباقة</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f5f5f5;
@@ -18,47 +13,21 @@
             line-height: 1.8;
             transition: all 0.3s;
         }
-
-        /* English Mode (LTR) */
-        body.lang-en {
-            direction: ltr;
-            text-align: left;
-        }
-
-        body.lang-en .container {
-            direction: ltr;
-            text-align: left;
-        }
-
-        body.lang-en .back-link {
-            transform: scaleX(-1);
-        }
-
-        body.lang-en .back-link:hover {
-            transform: scaleX(-1) translateX(5px);
-        }
-
-        body.lang-en table th,
-        body.lang-en table td {
-            text-align: left;
-        }
-
-        /* Header */
+        body.lang-en { direction: ltr; text-align: left; }
+        body.lang-en .container { direction: ltr; text-align: left; }
+        body.lang-en table th, body.lang-en table td { text-align: left; }
+        body.lang-en .highlight-box { border-right: none; border-left: 4px solid #667eea; }
+        body.lang-en .back-link:hover { transform: translateX(-5px); }
+        body.lang-en ul { margin: 20px 0 20px 30px; }
         header {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255,255,255,0.95);
             padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
         .header-content {
             display: flex;
             justify-content: space-between;
@@ -66,19 +35,8 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-
-        .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .lang-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
+        .logo { font-size: 1.8em; font-weight: bold; color: #667eea; text-decoration: none; }
+        .lang-buttons { display: flex; gap: 10px; }
         .lang-btn {
             padding: 8px 20px;
             border: 2px solid #667eea;
@@ -90,124 +48,28 @@
             font-size: 0.9em;
             transition: all 0.3s;
         }
-
-        .lang-btn:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .lang-btn.active {
-            background: #667eea;
-            color: white;
-        }
-
+        .lang-btn:hover { background: #667eea; color: white; }
+        .lang-btn.active { background: #667eea; color: white; }
         nav a {
             color: #333;
             text-decoration: none;
             margin-left: 30px;
             font-weight: 500;
-            transition: color 0.3s;
         }
-
-        body.lang-en nav a {
-            margin-left: 0;
-            margin-right: 30px;
-        }
-
-        nav a:hover {
-            color: #667eea;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        /* Main Content */
-        .main-content {
-            background: white;
-            padding: 60px 0;
-        }
-
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            color: #764ba2;
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        body.lang-en p {
-            text-align: left;
-        }
-
-        ul {
-            margin: 20px 0 20px 30px;
-        }
-
-        body.lang-en ul {
-            margin: 20px 0 20px 30px;
-        }
-
-        li {
-            margin-bottom: 12px;
-        }
-
-        /* Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: #f9f9f9;
-        }
-
-        table th {
-            background: #667eea;
-            color: white;
-            padding: 15px;
-            text-align: right;
-        }
-
-        body.lang-en table th {
-            text-align: left;
-        }
-
-        table td {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            text-align: right;
-        }
-
-        body.lang-en table td {
-            text-align: left;
-        }
-
-        table tr:hover {
-            background: #f0f0f0;
-        }
-
-        /* Highlight Box */
+        body.lang-en nav a { margin-left: 0; margin-right: 30px; }
+        .nav-links { display: flex; align-items: center; gap: 20px; }
+        .main-content { background: white; padding: 60px 0; }
+        h1 { color: #667eea; font-size: 2.5em; margin-bottom: 30px; text-align: center; }
+        h2 { color: #667eea; font-size: 1.8em; margin-top: 40px; margin-bottom: 20px; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
+        h3 { color: #764ba2; font-size: 1.3em; margin-top: 25px; margin-bottom: 15px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        body.lang-en p { text-align: left; }
+        ul { margin: 20px 0 20px 30px; }
+        li { margin-bottom: 12px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #f9f9f9; }
+        table th { background: #667eea; color: white; padding: 15px; text-align: right; }
+        table td { padding: 15px; border-bottom: 1px solid #ddd; text-align: right; }
+        table tr:hover { background: #f0f0f0; }
         .highlight-box {
             background: #f0f4ff;
             border-right: 4px solid #667eea;
@@ -215,29 +77,9 @@
             margin: 20px 0;
             border-radius: 5px;
         }
-
-        body.lang-en .highlight-box {
-            border-right: none;
-            border-left: 4px solid #667eea;
-        }
-
-        .highlight-box strong {
-            color: #667eea;
-        }
-
-        /* Link */
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #764ba2;
-            text-decoration: underline;
-        }
-
-        /* Footer */
+        .highlight-box strong { color: #667eea; }
+        a { color: #667eea; text-decoration: none; transition: color 0.3s; }
+        a:hover { color: #764ba2; text-decoration: underline; }
         footer {
             background: #333;
             color: white;
@@ -245,31 +87,10 @@
             text-align: center;
             margin-top: 60px;
         }
-
-        .footer-content {
-            margin-bottom: 20px;
-        }
-
-        .footer-link {
-            color: #667eea;
-            transition: color 0.3s;
-        }
-
-        .footer-link:hover {
-            color: #fff;
-        }
-
-        .footer-content p {
-            margin: 10px 0;
-        }
-
-        .divider {
-            height: 1px;
-            background: rgba(255, 255, 255, 0.1);
-            margin: 20px 0;
-        }
-
-        /* Back to Home */
+        .footer-link { color: #667eea; transition: color 0.3s; }
+        .footer-link:hover { color: #fff; }
+        .footer-content p { margin: 10px 0; }
+        .divider { height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0; }
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
@@ -280,116 +101,31 @@
             border-radius: 5px;
             transition: all 0.3s;
         }
-
-        .back-link:hover {
-            background: #764ba2;
-            transform: translateX(5px);
-        }
-
-        body.lang-en .back-link:hover {
-            transform: translateX(-5px);
-        }
-
-        /* Responsive */
+        .back-link:hover { background: #764ba2; transform: translateX(5px); }
+        .update-date { text-align: center; color: #999; font-size: 0.9em; margin-top: 40px; }
         @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .logo {
-                font-size: 1.5em;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-            }
-
-            nav {
-                display: flex;
-                justify-content: center;
-            }
-
-            nav a {
-                margin-left: 15px;
-                font-size: 0.9em;
-            }
-
-            body.lang-en nav a {
-                margin-right: 15px;
-                margin-left: 0;
-            }
-
-            table {
-                font-size: 0.9em;
-            }
-
-            table th, table td {
-                padding: 10px;
-            }
+            .container { padding: 0 15px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.4em; }
+            .header-content { flex-direction: column; gap: 15px; }
+            .logo { font-size: 1.5em; }
+            .nav-links { flex-direction: column; gap: 10px; width: 100%; }
+            nav { display: flex; justify-content: center; }
+            nav a { margin-left: 15px; }
+            body.lang-en nav a { margin-right: 15px; margin-left: 0; }
+            table { font-size: 0.9em; }
+            table th, table td { padding: 10px; }
         }
-
-        .update-date {
-            text-align: center;
-            color: #999;
-            font-size: 0.9em;
-            margin-top: 40px;
-        }
-
-        /* Hidden elements for language toggle */
-        .lang-ar, .lang-en {
-            display: none;
-        }
-
-        body.lang-ar .lang-ar {
-            display: inline;
-        }
-
-        body.lang-en .lang-en {
-            display: inline;
-        }
-
-        body.lang-ar .lang-ar-block {
-            display: block;
-        }
-
-        body.lang-en .lang-en-block {
-            display: block;
-        }
-
-        .lang-ar-block {
-            display: none;
-        }
-
-        .lang-en-block {
-            display: none;
-        }
-
-        body.lang-ar .lang-ar-block {
-            display: block;
-        }
-
-        body.lang-en .lang-en-block {
-            display: block;
-        }
+        .lang-ar, .lang-en { display: none; }
+        body.lang-ar .lang-ar { display: inline; }
+        body.lang-en .lang-en { display: inline; }
+        body.lang-ar .lang-ar-block { display: block; }
+        body.lang-en .lang-en-block { display: block; }
+        .lang-ar-block { display: none; }
+        .lang-en-block { display: none; }
     </style>
 </head>
 <body class="lang-en">
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -413,7 +149,6 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <section class="main-content">
         <div class="container">
             <a href="index.html" class="back-link">
@@ -430,17 +165,15 @@
                 <span class="lang-en">"Data Control" App</span>
             </p>
 
-            <!-- 1. مقدمة -->
             <h2>
                 <span class="lang-ar">1️⃣ مقدمة</span>
                 <span class="lang-en">1️⃣ Introduction</span>
             </h2>
             <p>
-                <span class="lang-ar">مرحباً بك في تطبيق <strong>"التحكم فى الباقة"</strong>. نضع خصوصيتك في مقدمة أولوياتنا. تم تصميم هذا التطبيق لمساعدتك في إدارة استهلاك بياناتك الشهرية بكفاءة، مع ضمان الحفاظ على خصوصيتك التامة وأمان بياناتك.</span>
-                <span class="lang-en">Welcome to <strong>"Data Control"</strong> app. Your privacy is our top priority. This app is designed to help you manage your monthly data consumption efficiently, while ensuring complete privacy and data security.</span>
+                <span class="lang-ar">مرحباً بك في تطبيق <strong>"التحكم فى الباقة"</strong>. نضع خصوصيتك في مقدمة أولوياتنا.</span>
+                <span class="lang-en">Welcome to <strong>"Data Control"</strong> app. Your privacy is our top priority.</span>
             </p>
 
-            <!-- 2. جمع البيانات -->
             <h2>
                 <span class="lang-ar">2️⃣ جمع البيانات</span>
                 <span class="lang-en">2️⃣ Data Collection</span>
@@ -452,280 +185,56 @@
                 </strong>
             </div>
             <ul>
-                <li>
-                    <span class="lang-ar">❌ لا نجمع اسمك، بريدك الإلكتروني، رقم هاتفك، أو أي معلومات تعريف شخصية</span>
-                    <span class="lang-en">❌ We do not collect your name, email, phone number, or any personally identifiable information</span>
-                </li>
-                <li>
-                    <span class="lang-ar">❌ لا نجمع عنوان IP الخاص بك</span>
-                    <span class="lang-en">❌ We do not collect your IP address</span>
-                </li>
-                <li>
-                    <span class="lang-ar">❌ لا نتتبع موقعك الجغرافي</span>
-                    <span class="lang-en">❌ We do not track your geographic location</span>
-                </li>
-                <li>
-                    <span class="lang-ar">❌ لا نستخدم أي أدوات تحليلات لتتبع سلوكك داخل التطبيق</span>
-                    <span class="lang-en">❌ We do not use any analytics tools to track your behavior within the app</span>
-                </li>
-                <li>
-                    <span class="lang-ar">✅ كل ما يحدث في التطبيق يبقى على جهازك فقط</span>
-                    <span class="lang-en">✅ Everything that happens in the app stays on your device only</span>
-                </li>
+                <li><span class="lang-ar">❌ لا نجمع اسمك، بريدك الإلكتروني، رقم هاتفك</span><span class="lang-en">❌ We do not collect your name, email, phone number</span></li>
+                <li><span class="lang-ar">❌ لا نجمع عنوان IP الخاص بك</span><span class="lang-en">❌ We do not collect your IP address</span></li>
+                <li><span class="lang-ar">❌ لا نتتبع موقعك الجغرافي</span><span class="lang-en">❌ We do not track your location</span></li>
+                <li><span class="lang-ar">✅ كل ما يحدث في التطبيق يبقى على جهازك فقط</span><span class="lang-en">✅ Everything stays on your device only</span></li>
             </ul>
 
-            <!-- 3. كيفية عمل التطبيق -->
             <h2>
-                <span class="lang-ar">3️⃣ كيفية عمل التطبيق (الشفافية الكاملة)</span>
-                <span class="lang-en">3️⃣ How the App Works (Full Transparency)</span>
+                <span class="lang-ar">3️⃣ الصلاحيات المطلوبة</span>
+                <span class="lang-en">3️⃣ Required Permissions</span>
             </h2>
-
-            <h3>
-                <span class="lang-ar">🔗 تحديد السرعة (Throttling)</span>
-                <span class="lang-en">🔗 Speed Limiting (Throttling)</span>
-            </h3>
-            <p>
-                <span class="lang-ar">التطبيق ينشئ نفق VPN محلي على جهازك لتقييد سرعة التطبيقات التي تختارها (مثل فيسبوك، تيك توك، انستجرام). هذه العملية تتم محليًا بالكامل على جهازك.</span>
-                <span class="lang-en">The app creates a local VPN tunnel on your device to limit the speed of apps you choose (such as Facebook, TikTok, Instagram). This process is done entirely locally on your device.</span>
-            </p>
-
-            <h3>
-                <span class="lang-ar">📊 مراقبة الاستهلاك</span>
-                <span class="lang-en">📊 Usage Monitoring</span>
-            </h3>
-            <p>
-                <span class="lang-ar">يتم حساب استهلاك البيانات باستخدام أدوات Android الرسمية (NetworkStatsManager). هذه البيانات تُعرض لك فقط ولا تُخزن أو تُرسل إلى أي مكان خارجي.</span>
-                <span class="lang-en">Data usage is calculated using official Android tools (NetworkStatsManager). This data is displayed to you only and is not stored or sent anywhere externally.</span>
-            </p>
-
-            <h3>
-                <span class="lang-ar">📱 التطبيقات المستهدفة</span>
-                <span class="lang-en">📱 Target Apps</span>
-            </h3>
-            <p>
-                <span class="lang-ar">قائمة التطبيقات التي تختارها لحظيًا يتم حفظها على جهازك ولا تشارك مع أي جهة خارجية.</span>
-                <span class="lang-en">The list of apps you choose is saved locally on your device and is not shared with any third party.</span>
-            </p>
-
-            <!-- 4. الصلاحيات -->
-            <h2>
-                <span class="lang-ar">4️⃣ الصلاحيات المطلوبة (Permissions)</span>
-                <span class="lang-en">4️⃣ Required Permissions</span>
-            </h2>
-            <p>
-                <span class="lang-ar">يطلب التطبيق الصلاحيات التالية لتشغيل خدماته الأساسية:</span>
-                <span class="lang-en">The app requires the following permissions to run its core services:</span>
-            </p>
             <table>
                 <thead>
                     <tr>
-                        <th>
-                            <span class="lang-ar">الصلاحية</span>
-                            <span class="lang-en">Permission</span>
-                        </th>
-                        <th>
-                            <span class="lang-ar">الغرض</span>
-                            <span class="lang-en">Purpose</span>
-                        </th>
+                        <th><span class="lang-ar">الصلاحية</span><span class="lang-en">Permission</span></th>
+                        <th><span class="lang-ar">الغرض</span><span class="lang-en">Purpose</span></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>VPN Service</strong></td>
-                        <td>
-                            <span class="lang-ar">لإنشاء نفق محلي على جهازك لتطبيق حد السرعة على التطبيقات المختارة</span>
-                            <span class="lang-en">To create a local tunnel on your device to apply speed limits to selected apps</span>
-                        </td>
+                        <td><span class="lang-ar">إنشاء نفق محلي لتطبيق حد السرعة</span><span class="lang-en">Create local tunnel for speed limiting</span></td>
                     </tr>
                     <tr>
                         <td><strong>PACKAGE_USAGE_STATS</strong></td>
-                        <td>
-                            <span class="lang-ar">للتعرف على التطبيق النشط حاليًا (المفتوح على الشاشة) لتطبيق الخنق الانتقائي عندما تختار هذه الميزة</span>
-                            <span class="lang-en">To identify the currently active app (open on screen) for selective throttling when you choose this feature</span>
-                        </td>
+                        <td><span class="lang-ar">للتعرف على التطبيق النشط حاليًا</span><span class="lang-en">Identify currently active app</span></td>
                     </tr>
                     <tr>
                         <td><strong>INTERNET</strong></td>
-                        <td>
-                            <span class="lang-ar">لعرض الإعلانات فقط (من Unity Ads) وليس لإرسال أي بيانات عنك</span>
-                            <span class="lang-en">Only to display ads (from Unity Ads), not to send any data about you</span>
-                        </td>
+                        <td><span class="lang-ar">لعرض الإعلانات فقط (Unity Ads)</span><span class="lang-en">Only to display ads (Unity Ads)</span></td>
                     </tr>
                 </tbody>
             </table>
-            <p style="margin-top: 20px;">
-                <strong>
-                    <span class="lang-ar">ملاحظة:</span>
-                    <span class="lang-en">Note:</span>
-                </strong>
-                <span class="lang-ar">جميع هذه الصلاحيات تُستخدم للغرض المذكور فقط، ولا تمنحنا أي وصول إلى بياناتك الشخصية.</span>
-                <span class="lang-en">All these permissions are used only for the stated purpose and do not give us any access to your personal data.</span>
-            </p>
 
-            <!-- 5. الإعلانات -->
             <h2>
-                <span class="lang-ar">5️⃣ الإعلانات (الطرف الثالث الوحيد)</span>
-                <span class="lang-en">5️⃣ Ads (The Only Third Party)</span>
+                <span class="lang-ar">4️⃣ الإعلانات (الطرف الثالث الوحيد)</span>
+                <span class="lang-en">4️⃣ Ads (The Only Third Party)</span>
             </h2>
             <p>
-                <span class="lang-ar">نعرض إعلانات داخل التطبيق من خلال شبكة إعلانات Unity Ads، وهي الطرف الثالث الوحيد الذي يتفاعل مع التطبيق.</span>
-                <span class="lang-en">We display ads within the app through Unity Ads network, which is the only third party that interacts with the app.</span>
+                <span class="lang-ar">نعرض إعلانات من خلال Unity Ads. يمكنك التحكم في الإعلانات المخصصة من إعدادات جهازك.</span>
+                <span class="lang-en">We display ads through Unity Ads. You can control personalized ads from your device settings.</span>
             </p>
-
-            <h3>
-                <span class="lang-ar">📊 ماذا تجمع Unity Ads؟</span>
-                <span class="lang-en">📊 What does Unity Ads collect?</span>
-            </h3>
-            <ul>
-                <li>
-                    <strong>
-                        <span class="lang-ar">معرف الإعلان (Advertising ID):</span>
-                        <span class="lang-en">Advertising ID:</span>
-                    </strong>
-                    <span class="lang-ar">وهو معرف فريد لجهازك لتقديم إعلانات مخصصة. يمكنك إعادة ضبط هذا المعرف أو إلغاء تخصيص الإعلانات من إعدادات جهازك (الإعدادات > Google > الإعلانات)</span>
-                    <span class="lang-en">A unique identifier for your device to deliver personalized ads. You can reset this ID or opt-out of ad personalization from your device settings (Settings > Google > Ads)</span>
-                </li>
-                <li>
-                    <strong>
-                        <span class="lang-ar">نوع الجهاز وإصدار نظام التشغيل:</span>
-                        <span class="lang-en">Device type and OS version:</span>
-                    </strong>
-                    <span class="lang-ar">لعرض الإعلانات المناسبة لجهازك</span>
-                    <span class="lang-en">To display appropriate ads for your device</span>
-                </li>
-                <li>
-                    <strong>
-                        <span class="lang-ar">الموقع التقريبي (اختياري):</span>
-                        <span class="lang-en">Approximate location (optional):</span>
-                    </strong>
-                    <span class="lang-ar">لتقديم إعلانات ذات صلة بمنطقتك</span>
-                    <span class="lang-en">To show ads relevant to your region</span>
-                </li>
-            </ul>
-
-            <h3>
-                <span class="lang-ar">🎛️ كيف تتحكم في الإعلانات؟</span>
-                <span class="lang-en">🎛️ How to control ads?</span>
-            </h3>
             <p>
-                <span class="lang-ar">يمكنك في أي وقت:</span>
-                <span class="lang-en">You can at any time:</span>
+                <span class="lang-ar">للمزيد: <a href="https://unity.com/legal/privacy-policy" target="_blank">Unity Privacy Policy</a></span>
+                <span class="lang-en">For more: <a href="https://unity.com/legal/privacy-policy" target="_blank">Unity Privacy Policy</a></span>
             </p>
-            <ul>
-                <li>
-                    <span class="lang-ar">إلغاء تخصيص الإعلانات من إعدادات جهازك</span>
-                    <span class="lang-en">Opt-out of ad personalization from your device settings</span>
-                </li>
-                <li>
-                    <span class="lang-ar">تعطيل الإعلانات المخصصة (غير متاحة حاليًا داخل التطبيق نفسه، لكن يمكنك التحكم من إعدادات جهازك)</span>
-                    <span class="lang-en">Disable personalized ads (not currently available within the app itself, but you can control it from your device settings)</span>
-                </li>
-            </ul>
 
-            <p style="margin-top: 20px;">
-                <span class="lang-ar">للمزيد من المعلومات، يمكنك الاطلاع على سياسة خصوصية Unity Technologies:</span>
-                <span class="lang-en">For more information, you can review Unity Technologies' Privacy Policy:</span>
-            </p>
-            <p>🔗 <a href="https://unity.com/legal/privacy-policy" target="_blank">Unity Privacy Policy</a></p>
-
-            <div class="highlight-box">
-                <strong>
-                    <span class="lang-ar">ملاحظة مهمة:</span>
-                    <span class="lang-en">Important Note:</span>
-                </strong>
-                <span class="lang-ar">نؤكد أننا لا نشارك أي بيانات عنك مع Unity Ads، فكل ما تجمعه هو من خلال تفاعل الإعلان مع جهازك مباشرة.</span>
-                <span class="lang-en">We confirm that we do not share any data about you with Unity Ads. Everything they collect is through the ad's direct interaction with your device.</span>
-            </div>
-
-            <!-- 6. مشاركة البيانات -->
             <h2>
-                <span class="lang-ar">6️⃣ مشاركة البيانات</span>
-                <span class="lang-en">6️⃣ Data Sharing</span>
+                <span class="lang-ar">5️⃣ الاتصال بنا</span>
+                <span class="lang-en">5️⃣ Contact Us</span>
             </h2>
-            <p>
-                <span class="lang-ar">نحن <strong>لا نبيع، ولا نتاجر، ولا ننقل</strong> أي من بياناتك إلى أي طرف خارجي، وذلك لأننا ببساطة لا نجمعها من الأساس.</span>
-                <span class="lang-en">We <strong>do not sell, trade, or transfer</strong> any of your data to any third party, simply because we do not collect it in the first place.</span>
-            </p>
-            <p>
-                <span class="lang-ar">الجهة الوحيدة التي تتعامل مع بيانات هي Unity Ads، وذلك وفقًا لسياسة الخصوصية الخاصة بها، ونحن لا نتحكم في ذلك ولا نشارك فيه.</span>
-                <span class="lang-en">The only party that deals with data is Unity Ads, according to their privacy policy, and we do not control or participate in that.</span>
-            </p>
-
-            <!-- 7. أمان البيانات -->
-            <h2>
-                <span class="lang-ar">7️⃣ أمان البيانات</span>
-                <span class="lang-en">7️⃣ Data Security</span>
-            </h2>
-            <p>
-                <span class="lang-ar">بما أن التطبيق يعمل محليًا على جهازك ولا ينقل بياناتك عبر الإنترنت، فإن خطر التعرض لاختراق البيانات محدود للغاية.</span>
-                <span class="lang-en">Since the app runs locally on your device and does not transmit your data over the internet, the risk of data breaches is extremely limited.</span>
-            </p>
-            <p>
-                <strong>
-                    <span class="lang-ar">نوصيك دائمًا بـ:</span>
-                    <span class="lang-en">We always recommend:</span>
-                </strong>
-            </p>
-            <ul>
-                <li>
-                    <span class="lang-ar">🔐 حماية جهازك بكلمة مرور قوية</span>
-                    <span class="lang-en">🔐 Protect your device with a strong password</span>
-                </li>
-                <li>
-                    <span class="lang-ar">♻️ تحديث نظام التشغيل بانتظام</span>
-                    <span class="lang-en">♻️ Keep your operating system updated regularly</span>
-                </li>
-            </ul>
-
-            <!-- 8. خصوصية الأطفال -->
-            <h2>
-                <span class="lang-ar">8️⃣ خصوصية الأطفال</span>
-                <span class="lang-en">8️⃣ Children's Privacy</span>
-            </h2>
-            <p>
-                <span class="lang-ar">تطبيقنا لا يستهدف الأطفال تحت سن 13 عامًا. نحن لا نقوم عن قصد بجمع أي بيانات من هذه الفئة العمرية. إذا كنت ولي أمر وتعتقد أن طفلك يستخدم التطبيق، يُرجى التواصل معنا.</span>
-                <span class="lang-en">Our app does not target children under the age of 13. We do not knowingly collect any data from this age group. If you are a parent and believe your child is using the app, please contact us.</span>
-            </p>
-            <p>
-                <span class="lang-ar">للاستفسارات: <a href="mailto:farahat.xbs@gmail.com">farahat.xbs@gmail.com</a></span>
-                <span class="lang-en">For inquiries: <a href="mailto:farahat.xbs@gmail.com">farahat.xbs@gmail.com</a></span>
-            </p>
-
-            <!-- 9. التغييرات -->
-            <h2>
-                <span class="lang-ar">9️⃣ التغييرات على سياسة الخصوصية</span>
-                <span class="lang-en">9️⃣ Changes to Privacy Policy</span>
-            </h2>
-            <p>
-                <span class="lang-ar">قد نقوم بتحديث هذه السياسة من وقت لآخر. سيتم إعلامك بأي تغييرات جوهرية من خلال:</span>
-                <span class="lang-en">We may update this policy from time to time. You will be notified of any material changes through:</span>
-            </p>
-            <ul>
-                <li>
-                    <span class="lang-ar">📝 نشر السياسة الجديدة على هذه الصفحة</span>
-                    <span class="lang-en">📝 Posting the new policy on this page</span>
-                </li>
-                <li>
-                    <span class="lang-ar">🔔 إشعار داخل التطبيق</span>
-                    <span class="lang-en">🔔 In-app notification</span>
-                </li>
-            </ul>
-            <p>
-                <strong>
-                    <span class="lang-ar">يُرجى مراجعة هذه الصفحة دوريًا للاطلاع على أي تحديثات.</span>
-                    <span class="lang-en">Please review this page periodically for any updates.</span>
-                </strong>
-            </p>
-
-            <!-- 10. الاتصال -->
-            <h2>
-                <span class="lang-ar">🔟 الاتصال بنا</span>
-                <span class="lang-en">🔟 Contact Us</span>
-            </h2>
-            <p>
-                <span class="lang-ar">إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية، يمكنك التواصل معنا عبر البريد الإلكتروني:</span>
-                <span class="lang-en">If you have any questions or concerns about the Privacy Policy, you can contact us via email:</span>
-            </p>
             <div class="highlight-box">
                 📧 <a href="mailto:farahat.xbs@gmail.com">farahat.xbs@gmail.com</a>
             </div>
@@ -737,7 +246,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -772,12 +280,7 @@
 
     <script>
         function setLanguage(lang) {
-            // Remove active class from all buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Add active class to selected button
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             if (lang === 'ar') {
                 document.querySelectorAll('.lang-btn')[1].classList.add('active');
                 document.body.className = 'lang-ar';
@@ -789,18 +292,14 @@
                 document.documentElement.dir = 'ltr';
                 document.documentElement.lang = 'en';
             }
-
-            // Save preference
             localStorage.setItem('preferred_language', lang);
         }
 
-        // Load saved preference on page load
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('preferred_language');
             if (savedLang) {
                 setLanguage(savedLang);
             } else {
-                // Default is English
                 setLanguage('en');
             }
         });
