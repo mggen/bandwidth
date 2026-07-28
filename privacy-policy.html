@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Bandwidth Saver</title>
+    <title>Privacy Policy - Data Control</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -290,4 +290,28 @@
                 document.getElementById('s4Text').textContent = 'We display ads within the app through Unity Ads network, which is the only third party that interacts with the app.';
                 document.getElementById('s4More').textContent = 'For more information, you can review Unity Technologies\' Privacy Policy:';
                 document.getElementById('s5Title').textContent = '5️⃣ Data Security';
-                document.getElementById('s5Text').textContent = 'Since the app runs locally on your device and does not transmit your data over the internet
+                document.getElementById('s5Text').textContent = 'Since the app runs locally on your device and does not transmit your data over the internet, the risk of data breaches is extremely limited.';
+                document.getElementById('s6Title').textContent = '6️⃣ Children\'s Privacy';
+                document.getElementById('s6Text').textContent = 'Our app does not target children under the age of 13. We do not knowingly collect any data from this age group.';
+                document.getElementById('s7Title').textContent = '7️⃣ Contact Us';
+                document.getElementById('updateDate').textContent = 'Last Updated: July 2026';
+                document.getElementById('footerName').textContent = 'Data Control';
+                document.getElementById('footerDesc').textContent = 'Smart app for data consumption management';
+                document.getElementById('footerEmail').innerHTML = '📧 Email: <a href="mailto:farahat.xbs@gmail.com" class="footer-link">farahat.xbs@gmail.com</a>';
+                document.getElementById('footerHome').innerHTML = '🏠 <a href="index.html" class="footer-link">Home</a>';
+                document.getElementById('footerCopy').textContent = '© 2026 All Rights Reserved | Data Control';
+            }
+            localStorage.setItem('pref_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('pref_lang');
+            if (saved === 'ar') {
+                setLang('ar');
+            } else {
+                setLang('en');
+            }
+        });
+    </script>
+</body>
+</html>
