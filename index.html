@@ -16,6 +16,22 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
             line-height: 1.6;
+            transition: all 0.3s;
+        }
+
+        /* English Mode (LTR) */
+        body.lang-en {
+            direction: ltr;
+            text-align: left;
+        }
+
+        body.lang-en .container {
+            direction: ltr;
+            text-align: left;
+        }
+
+        body.lang-en .logo {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         /* Header */
@@ -38,12 +54,41 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .logo {
             font-size: 1.8em;
             font-weight: bold;
             color: #667eea;
+        }
+
+        .lang-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 8px 20px;
+            border: 2px solid #667eea;
+            background: transparent;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .lang-btn.active {
+            background: #667eea;
+            color: white;
         }
 
         nav a {
@@ -54,8 +99,19 @@
             transition: color 0.3s;
         }
 
+        body.lang-en nav a {
+            margin-left: 0;
+            margin-right: 30px;
+        }
+
         nav a:hover {
             color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         /* Hero Section */
@@ -111,7 +167,7 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -211,11 +267,6 @@
                 font-size: 2em;
             }
 
-            nav a {
-                margin-left: 15px;
-                font-size: 0.9em;
-            }
-
             .header-content {
                 flex-direction: column;
                 gap: 15px;
@@ -228,18 +279,76 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            body.lang-en nav a {
+                margin-right: 0;
+            }
+        }
+
+        /* Hidden elements for language toggle */
+        .lang-ar, .lang-en {
+            display: none;
+        }
+
+        body.lang-ar .lang-ar {
+            display: inline;
+        }
+
+        body.lang-en .lang-en {
+            display: inline;
+        }
+
+        body.lang-ar .lang-ar-block {
+            display: block;
+        }
+
+        body.lang-en .lang-en-block {
+            display: block;
+        }
+
+        .lang-ar-block {
+            display: none;
+        }
+
+        .lang-en-block {
+            display: none;
+        }
+
+        body.lang-ar .lang-ar-block {
+            display: block;
+        }
+
+        body.lang-en .lang-en-block {
+            display: block;
         }
     </style>
 </head>
-<body>
+<body class="lang-en">
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">📱 التحكم فى الباقة</div>
-                <nav>
-                    <a href="privacy-policy.html">سياسة الخصوصية</a>
-                </nav>
+                <div class="logo">
+                    <span class="lang-ar">📱 التحكم فى الباقة</span>
+                    <span class="lang-en">📱 Data Control</span>
+                </div>
+                <div class="nav-links">
+                    <nav>
+                        <a href="privacy-policy.html">
+                            <span class="lang-ar">سياسة الخصوصية</span>
+                            <span class="lang-en">Privacy Policy</span>
+                        </a>
+                    </nav>
+                    <div class="lang-buttons">
+                        <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                        <button class="lang-btn" onclick="setLanguage('ar')">العربية</button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -247,51 +356,99 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>🎯 التحكم فى الباقة</h1>
-            <p>تطبيق ذكي لإدارة استهلاك بياناتك الشهرية بكفاءة</p>
-            <p>🔒 خصوصيتك محمية - لا نجمع أي بيانات شخصية</p>
+            <h1>
+                <span class="lang-ar">🎯 التحكم فى الباقة</span>
+                <span class="lang-en">🎯 Data Control</span>
+            </h1>
+            <p>
+                <span class="lang-ar">تطبيق ذكي لإدارة استهلاك بياناتك الشهرية بكفاءة</span>
+                <span class="lang-en">Smart app to manage your monthly data consumption efficiently</span>
+            </p>
+            <p>
+                <span class="lang-ar">🔒 خصوصيتك محمية - لا نجمع أي بيانات شخصية</span>
+                <span class="lang-en">🔒 Your privacy is protected - We collect no personal data</span>
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2>✨ المميزات الرئيسية</h2>
+            <h2>
+                <span class="lang-ar">✨ المميزات الرئيسية</span>
+                <span class="lang-en">✨ Key Features</span>
+            </h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>تحديد السرعة</h3>
-                    <p>قيّد سرعة التطبيقات التي تختارها مثل فيسبوك وتيك توك وانستجرام بكل سهولة</p>
+                    <h3>
+                        <span class="lang-ar">تحديد السرعة</span>
+                        <span class="lang-en">Speed Limiting</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">قيّد سرعة التطبيقات التي تختارها مثل فيسبوك وتيك توك وانستجرام بكل سهولة</span>
+                        <span class="lang-en">Easily limit the speed of apps you choose like Facebook, TikTok, and Instagram</span>
+                    </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>مراقبة الاستهلاك</h3>
-                    <p>تابع استهلاك بياناتك بدقة باستخدام أدوات Android الرسمية</p>
+                    <h3>
+                        <span class="lang-ar">مراقبة الاستهلاك</span>
+                        <span class="lang-en">Usage Monitoring</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">تابع استهلاك بياناتك بدقة باستخدام أدوات Android الرسمية</span>
+                        <span class="lang-en">Track your data usage accurately using official Android tools</span>
+                    </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
-                    <h3>خصوصية كاملة</h3>
-                    <p>كل البيانات تبقى على جهازك - لا إرسال أو مشاركة مع أي جهة خارجية</p>
+                    <h3>
+                        <span class="lang-ar">خصوصية كاملة</span>
+                        <span class="lang-en">Full Privacy</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">كل البيانات تبقى على جهازك - لا إرسال أو مشاركة مع أي جهة خارجية</span>
+                        <span class="lang-en">All data stays on your device - No sending or sharing with any third party</span>
+                    </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
-                    <h3>أمان عالي</h3>
-                    <p>التطبيق يعمل محليًا على جهازك مما يوفر حماية عالية للبيانات</p>
+                    <h3>
+                        <span class="lang-ar">أمان عالي</span>
+                        <span class="lang-en">High Security</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">التطبيق يعمل محليًا على جهازك مما يوفر حماية عالية للبيانات</span>
+                        <span class="lang-en">The app runs locally on your device providing high data protection</span>
+                    </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
-                    <h3>اختيار انتقائي</h3>
-                    <p>اختر التطبيقات التي تريد تطبيق الحد عليها بحرية كاملة</p>
+                    <h3>
+                        <span class="lang-ar">اختيار انتقائي</span>
+                        <span class="lang-en">Selective Choice</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">اختر التطبيقات التي تريد تطبيق الحد عليها بحرية كاملة</span>
+                        <span class="lang-en">Freely choose which apps you want to apply the limit to</span>
+                    </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
-                    <h3>سهل الاستخدام</h3>
-                    <p>واجهة بسيطة وسهلة الاستخدام للجميع</p>
+                    <h3>
+                        <span class="lang-ar">سهل الاستخدام</span>
+                        <span class="lang-en">Easy to Use</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">واجهة بسيطة وسهلة الاستخدام للجميع</span>
+                        <span class="lang-en">Simple and easy-to-use interface for everyone</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -300,11 +457,21 @@
     <!-- About Section -->
     <section class="about">
         <div class="container">
-            <h2>💡 عن التطبيق</h2>
+            <h2>
+                <span class="lang-ar">💡 عن التطبيق</span>
+                <span class="lang-en">💡 About the App</span>
+            </h2>
             <p>
-                تم تصميم تطبيق "التحكم فى الباقة" لمساعدتك في إدارة استهلاك بياناتك الشهرية بكفاءة عالية، 
-                مع ضمان الحفاظ على خصوصيتك التامة وأمان بياناتك. نحن نعتقد أن خصوصيتك حق أساسي، 
-                لذا التطبيق يعمل بشفافية كاملة ولا يجمع أي بيانات شخصية على الإطلاق.
+                <span class="lang-ar">
+                    تم تصميم تطبيق "التحكم فى الباقة" لمساعدتك في إدارة استهلاك بياناتك الشهرية بكفاءة عالية، 
+                    مع ضمان الحفاظ على خصوصيتك التامة وأمان بياناتك. نحن نعتقد أن خصوصيتك حق أساسي، 
+                    لذا التطبيق يعمل بشفافية كاملة ولا يجمع أي بيانات شخصية على الإطلاق.
+                </span>
+                <span class="lang-en">
+                    The "Data Control" app is designed to help you manage your monthly data consumption efficiently, 
+                    while ensuring complete privacy and data security. We believe that your privacy is a fundamental right, 
+                    so the app operates with complete transparency and does not collect any personal data at all.
+                </span>
             </p>
         </div>
     </section>
@@ -313,21 +480,66 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p><strong>التحكم فى الباقة</strong></p>
-                <p>تطبيق ذكي لإدارة استهلاك البيانات</p>
+                <p><strong>
+                    <span class="lang-ar">التحكم فى الباقة</span>
+                    <span class="lang-en">Data Control</span>
+                </strong></p>
+                <p>
+                    <span class="lang-ar">تطبيق ذكي لإدارة استهلاك البيانات</span>
+                    <span class="lang-en">Smart app for data consumption management</span>
+                </p>
                 <div class="divider"></div>
                 <p>
-                    📧 البريد الإلكتروني: 
+                    📧 <span class="lang-ar">البريد الإلكتروني:</span><span class="lang-en">Email:</span>
                     <a href="mailto:farahat.xbs@gmail.com" class="footer-link">farahat.xbs@gmail.com</a>
                 </p>
                 <p>
-                    📄 
-                    <a href="privacy-policy.html" class="footer-link">اقرأ سياسة الخصوصية</a>
+                    📄
+                    <a href="privacy-policy.html" class="footer-link">
+                        <span class="lang-ar">اقرأ سياسة الخصوصية</span>
+                        <span class="lang-en">Read Privacy Policy</span>
+                    </a>
                 </p>
                 <div class="divider"></div>
-                <p>&copy; 2026 جميع الحقوق محفوظة | التحكم فى الباقة</p>
+                <p>&copy; 2026 <span class="lang-ar">جميع الحقوق محفوظة | التحكم فى الباقة</span><span class="lang-en">All Rights Reserved | Data Control</span></p>
             </div>
         </div>
     </footer>
+
+    <script>
+        function setLanguage(lang) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to selected button
+            if (lang === 'ar') {
+                document.querySelectorAll('.lang-btn')[1].classList.add('active');
+                document.body.className = 'lang-ar';
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = 'ar';
+            } else {
+                document.querySelectorAll('.lang-btn')[0].classList.add('active');
+                document.body.className = 'lang-en';
+                document.documentElement.dir = 'ltr';
+                document.documentElement.lang = 'en';
+            }
+
+            // Save preference
+            localStorage.setItem('preferred_language', lang);
+        }
+
+        // Load saved preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred_language');
+            if (savedLang) {
+                setLanguage(savedLang);
+            } else {
+                // Default is English
+                setLanguage('en');
+            }
+        });
+    </script>
 </body>
 </html>
