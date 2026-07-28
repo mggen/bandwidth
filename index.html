@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>" />
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التحكم فى الباقة</title>
+    <title>التحكم فى الباقة - تطبيق إدارة الباقة</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -13,16 +18,38 @@
             line-height: 1.6;
             transition: all 0.3s;
         }
-        body.lang-en { direction: ltr; text-align: left; }
+
+        /* English Mode (LTR) */
+        body.lang-en {
+            direction: ltr;
+            text-align: left;
+        }
+
+        body.lang-en .container {
+            direction: ltr;
+            text-align: left;
+        }
+
+        body.lang-en .logo {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header */
         header {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
             padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         .header-content {
             display: flex;
             justify-content: space-between;
@@ -30,8 +57,18 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-        .logo { font-size: 1.8em; font-weight: bold; color: #667eea; text-decoration: none; }
-        .lang-buttons { display: flex; gap: 10px; }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .lang-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
         .lang-btn {
             padding: 8px 20px;
             border: 2px solid #667eea;
@@ -43,83 +80,263 @@
             font-size: 0.9em;
             transition: all 0.3s;
         }
-        .lang-btn:hover { background: #667eea; color: white; }
-        .lang-btn.active { background: #667eea; color: white; }
+
+        .lang-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .lang-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
         nav a {
             color: #333;
             text-decoration: none;
             margin-left: 30px;
             font-weight: 500;
+            transition: color 0.3s;
         }
-        body.lang-en nav a { margin-left: 0; margin-right: 30px; }
-        .nav-links { display: flex; align-items: center; gap: 20px; }
-        .hero { color: white; padding: 100px 0; text-align: center; }
-        .hero h1 { font-size: 3em; margin-bottom: 20px; }
-        .hero p { font-size: 1.3em; margin-bottom: 30px; opacity: 0.95; }
-        .features { padding: 80px 0; background: white; }
-        .features h2 { text-align: center; font-size: 2.5em; margin-bottom: 60px; color: #333; }
+
+        body.lang-en nav a {
+            margin-left: 0;
+            margin-right: 30px;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
+
         .feature-card {
             background: #f8f9fa;
             padding: 30px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
-        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(102,126,234,0.2); }
-        .feature-icon { font-size: 3em; margin-bottom: 20px; }
-        .feature-card h3 { color: #667eea; margin-bottom: 15px; font-size: 1.3em; }
-        .feature-card p { color: #666; line-height: 1.8; }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* About Section */
         .about {
             padding: 80px 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
         }
-        .about h2 { font-size: 2.5em; margin-bottom: 30px; }
-        .about p { font-size: 1.1em; max-width: 700px; margin: 0 auto 30px; line-height: 1.8; }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
         footer {
             background: #333;
             color: white;
             padding: 40px 0;
             text-align: center;
         }
-        .footer-link { color: #667eea; text-decoration: none; }
-        .footer-link:hover { color: #fff; }
-        .footer-content p { margin: 10px 0; }
-        .divider { height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2em; }
-            .features h2, .about h2 { font-size: 2em; }
-            .header-content { flex-direction: column; gap: 15px; }
-            .logo { font-size: 1.5em; }
-            .features-grid { grid-template-columns: 1fr; }
-            .nav-links { flex-direction: column; gap: 10px; width: 100%; }
-            nav { display: flex; justify-content: center; }
-            nav a { margin-left: 15px; }
-            body.lang-en nav a { margin-right: 15px; margin-left: 0; }
+
+        .footer-content {
+            margin-bottom: 20px;
         }
-        .lang-ar, .lang-en { display: none; }
-        body.lang-ar .lang-ar { display: inline; }
-        body.lang-en .lang-en { display: inline; }
-        body.lang-ar .lang-ar-block { display: block; }
-        body.lang-en .lang-en-block { display: block; }
-        .lang-ar-block { display: none; }
-        .lang-en-block { display: none; }
+
+        .footer-link {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #fff;
+        }
+
+        .footer-content p {
+            margin: 10px 0;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .features h2, .about h2 {
+                font-size: 2em;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo {
+                font-size: 1.5em;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            body.lang-en nav a {
+                margin-right: 0;
+            }
+        }
+
+        /* Hidden elements for language toggle */
+        .lang-ar, .lang-en {
+            display: none;
+        }
+
+        body.lang-ar .lang-ar {
+            display: inline;
+        }
+
+        body.lang-en .lang-en {
+            display: inline;
+        }
+
+        body.lang-ar .lang-ar-block {
+            display: block;
+        }
+
+        body.lang-en .lang-en-block {
+            display: block;
+        }
+
+        .lang-ar-block {
+            display: none;
+        }
+
+        .lang-en-block {
+            display: none;
+        }
+
+        body.lang-ar .lang-ar-block {
+            display: block;
+        }
+
+        body.lang-en .lang-en-block {
+            display: block;
+        }
     </style>
 </head>
 <body class="lang-en">
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
+                <div class="logo">
                     <span class="lang-ar">📱 التحكم فى الباقة</span>
                     <span class="lang-en">📱 Data Control</span>
-                </a>
+                </div>
                 <div class="nav-links">
                     <nav>
                         <a href="privacy-policy.html">
@@ -136,6 +353,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>
@@ -153,6 +371,7 @@
         </div>
     </section>
 
+    <!-- Features Section -->
     <section class="features">
         <div class="container">
             <h2>
@@ -167,10 +386,11 @@
                         <span class="lang-en">Speed Limiting</span>
                     </h3>
                     <p>
-                        <span class="lang-ar">قيّد سرعة التطبيقات التي تختارها مثل فيسبوك وتيك توك وانستجرام</span>
-                        <span class="lang-en">Limit the speed of apps you choose like Facebook, TikTok, and Instagram</span>
+                        <span class="lang-ar">قيّد سرعة التطبيقات التي تختارها مثل فيسبوك وتيك توك وانستجرام بكل سهولة</span>
+                        <span class="lang-en">Easily limit the speed of apps you choose like Facebook, TikTok, and Instagram</span>
                     </p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
                     <h3>
@@ -182,6 +402,7 @@
                         <span class="lang-en">Track your data usage accurately using official Android tools</span>
                     </p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
                     <h3>
@@ -190,9 +411,10 @@
                     </h3>
                     <p>
                         <span class="lang-ar">كل البيانات تبقى على جهازك - لا إرسال أو مشاركة مع أي جهة خارجية</span>
-                        <span class="lang-en">All data stays on your device - No sharing with any third party</span>
+                        <span class="lang-en">All data stays on your device - No sending or sharing with any third party</span>
                     </p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
                     <h3>
@@ -204,6 +426,7 @@
                         <span class="lang-en">The app runs locally on your device providing high data protection</span>
                     </p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
                     <h3>
@@ -212,9 +435,10 @@
                     </h3>
                     <p>
                         <span class="lang-ar">اختر التطبيقات التي تريد تطبيق الحد عليها بحرية كاملة</span>
-                        <span class="lang-en">Freely choose which apps to apply the limit to</span>
+                        <span class="lang-en">Freely choose which apps you want to apply the limit to</span>
                     </p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>
@@ -230,6 +454,7 @@
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="about">
         <div class="container">
             <h2>
@@ -237,12 +462,21 @@
                 <span class="lang-en">💡 About the App</span>
             </h2>
             <p>
-                <span class="lang-ar">تم تصميم تطبيق "التحكم فى الباقة" لمساعدتك في إدارة استهلاك بياناتك الشهرية بكفاءة عالية، مع ضمان الحفاظ على خصوصيتك التامة وأمان بياناتك. نحن نعتقد أن خصوصيتك حق أساسي، لذا التطبيق يعمل بشفافية كاملة ولا يجمع أي بيانات شخصية على الإطلاق.</span>
-                <span class="lang-en">The "Data Control" app is designed to help you manage your monthly data consumption efficiently, while ensuring complete privacy and data security. We believe that your privacy is a fundamental right, so the app operates with complete transparency and does not collect any personal data at all.</span>
+                <span class="lang-ar">
+                    تم تصميم تطبيق "التحكم فى الباقة" لمساعدتك في إدارة استهلاك بياناتك الشهرية بكفاءة عالية، 
+                    مع ضمان الحفاظ على خصوصيتك التامة وأمان بياناتك. نحن نعتقد أن خصوصيتك حق أساسي، 
+                    لذا التطبيق يعمل بشفافية كاملة ولا يجمع أي بيانات شخصية على الإطلاق.
+                </span>
+                <span class="lang-en">
+                    The "Data Control" app is designed to help you manage your monthly data consumption efficiently, 
+                    while ensuring complete privacy and data security. We believe that your privacy is a fundamental right, 
+                    so the app operates with complete transparency and does not collect any personal data at all.
+                </span>
             </p>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -274,8 +508,12 @@
 
     <script>
         function setLanguage(lang) {
-            // Update buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            // Remove active class from all buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to selected button
             if (lang === 'ar') {
                 document.querySelectorAll('.lang-btn')[1].classList.add('active');
                 document.body.className = 'lang-ar';
@@ -287,16 +525,18 @@
                 document.documentElement.dir = 'ltr';
                 document.documentElement.lang = 'en';
             }
+
+            // Save preference
             localStorage.setItem('preferred_language', lang);
         }
 
+        // Load saved preference on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Check if there's a saved preference
             const savedLang = localStorage.getItem('preferred_language');
             if (savedLang) {
                 setLanguage(savedLang);
             } else {
-                // Default to English
+                // Default is English
                 setLanguage('en');
             }
         });
